@@ -31,6 +31,12 @@ class SucheSeite extends Component {
 
     }
 
+    parseDatumZuSqlDatum(datum){
+        const splittedDate = datum.split('.');
+        var sqlDate = splittedDate[2] + "-" + splittedDate[1] + "-" + splittedDate[0]
+        return sqlDate;
+    }
+
     ladeSeite(){
         const values = queryString.parse(this.props.location.search)
         const begriff = values.begriff;
@@ -38,18 +44,22 @@ class SucheSeite extends Component {
         var datumbis = values.datumbis;
         const tags = values.tags;
 
+        this.parseDatumZuSqlDatum(datumvon);
+
         var kategorien = [];
         if(tags){
             kategorien = tags.split('_');
         }
 
         if(datumvon){
+            datumvon = this.parseDatumZuSqlDatum(datumvon);
             datumvon += " 00:00:00";
         } else {
             datumvon = "undefined";
         }
 
         if(datumbis){
+            datumbis = this.parseDatumZuSqlDatum(datumbis);
             datumbis += " 23:59:59";
         } else {
             datumbis = "undefined";
