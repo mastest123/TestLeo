@@ -12,7 +12,8 @@ class neuesRezeptSeite extends Component {
             beschreibung:"",
             tags:[],
             existierendeTags:[],
-            taglisten:[]
+            taglisten:[],
+            bildvorschauurl: ""
         };
     }
 
@@ -20,6 +21,10 @@ class neuesRezeptSeite extends Component {
         fetch('/api/kategorienamen')
         .then(res => res.json())
         .then(existierendeTags => this.setState({existierendeTags}, () => console.log('Kategorienamen fetched...', existierendeTags)));
+    }
+
+    handleBildUrl = (url) =>{
+        this.setState({bildvorschauurl: url});
     }
 
     tagHinzufuegen = () => {
@@ -86,11 +91,11 @@ class neuesRezeptSeite extends Component {
                             </div>
                             <div className="cardbody">
                                 <div className="cardpicture">
-                                    <img id="foodpicturedetailedit" src="AUSTAUSCHEN" alt="Kein Vorschaubild vorhanden"></img>
-                                    <input type="textfield" name="pictureurl" placeholder="Bild-URL" autoComplete="off" onChange={(event) => this.setState({bildpfad: event.target.value})} />
+                                    <img id="foodpicturedetailedit" src={this.state.bildvorschauurl} alt="Bild zur URL nicht gefunden"></img>
+                                    <input type="textfield" name="pictureurl" placeholder="Bild-URL" autoComplete="off" onChange={(event) => this.setState({bildpfad: event.target.value, bildvorschauurl:event.target.value})} />
                                 </div>
                                 <div className="detailtext">
-                                    <input type="textfield" name="reciptdescription" placeholder="Beschreibe das Rezept" autoComplete="off" onChange={(event) => this.setState({beschreibung: event.target.value})} />
+                                    <textarea name="reciptdescription" placeholder="Beschreibe das Rezept" autoComplete="off" onChange={(event) => this.setState({beschreibung: event.target.value})} />
                                 </div>
                                 <div className="upload_column">
                                     <div className="cardtagsdetail">

@@ -6,8 +6,8 @@ class Footer extends Component{
     render(){
         return(
             <footer>
-                <Link to="/impressum">Impressum </Link>
-                <Link to="/kontakt">| Kontakt</Link>
+                <Link to="/impressum">Impressum</Link>
+                <Link to="/kontakt">&nbsp;| Kontakt</Link>
             </footer>
         );
     }

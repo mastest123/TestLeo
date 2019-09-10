@@ -18,13 +18,13 @@ class RezeptUebersicht extends Component{
         .then(rezepte => this.setState({rezepte}, () => console.log('Rezepte fetched...', rezepte)));
     }
 
-    // fuehrt zum Serverabsturz aber funktioniert
     loescheRezept = (rid) => {
         fetch('/api/deleterezept/' + rid,{
             method: 'DELETE',
         })
         .then(res => res.json());
     }
+
 
     render(){
         return(
