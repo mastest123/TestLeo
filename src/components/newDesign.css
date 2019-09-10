@@ -1,0 +1,524 @@
+/*--------------------------------------------------
+variables
+---------------------------------------------------*/
+:root{ 
+    --back: #659B5E;
+    --tagcolor:#95bf74;
+    --mediumdark:#556f44;
+    --dark:#283f3b;
+    --taghover:#526940;
+    --upload:#EE7600;
+    --uploadhover:#8B4500;
+    --delete:#8b3e2f;
+
+   /* --back: #c3b299;
+    --tagcolor:#c3b299;
+    --mediumdark:#7d7262;
+    --dark:#6b6054;
+    --taghover:#526940;
+    --buttoncolor: #7d7262;*/
+}
+
+
+/*--------------------------------------------------
+Pictures
+---------------------------------------------------*/
+#foodpicturedetailedit{
+    display:flex;
+    height: auto;
+    padding:50px;
+    max-width: 50px;
+}
+
+
+/*--------------------------------------------------
+Header/Footer
+---------------------------------------------------*/
+html{
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    background: var(--tagcolor);
+}
+
+header{
+    font: 14px/1.5 'Anka Coder', monospace;
+}
+
+footer a{
+    text-decoration: none;
+}
+
+.header,maincontainer,footer{
+    padding: 1rem;
+}
+
+
+main{
+    padding-top: 0em;
+}
+
+
+body{
+    margin:0px;
+    background: #fffcf2;
+}
+
+/*--------------------------------------------------
+Boxcard
+---------------------------------------------------*/
+
+#Maincaption{
+    font-size: 40px; 
+    color: white;
+}
+
+.breakpoint{
+    display:flex;
+    flex-grow: 9;
+}
+
+#foodcardcaption, #filter, #filterbutton{
+    background-color: var(--back)  ;
+    color: white;
+}
+
+h2{
+    display:flex;
+}
+
+
+#foodcardpicture{
+    border-radius: 18px;
+}
+
+.cardpicture{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 10px;
+}
+
+#logincontainer,#kontaktcontainer{
+    position: relative;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    display: flex;
+    padding: 3em 50px;
+}
+
+#kontaktcontainer{
+    padding: 0em 50px;
+}
+
+.boxcard,.boxcarddetail{
+    border-radius: 18px;
+    background-color: whitesmoke;
+    box-shadow: 15px 28px 25px -18px grey;
+}
+
+.boxcarddetail{
+    padding-bottom: 1em;
+    margin: 1em;
+}
+
+.cardcaption{
+    display:flex;
+    background-color: var(--back);
+    padding: 0rem;
+    padding-left: 0.5em;
+    border-top-left-radius:18px;
+    border-top-right-radius: 18px;
+    width:auto;
+    height: 50px;
+}
+
+.timestamp{
+    justify-content: space-between;
+}
+
+.erstelldatum{
+    margin: 15px;
+    color: lightgray;
+}
+
+.cardtagsdetail{
+    display: flex;
+    width: 170px;
+    flex-grow:2;
+    flex-direction: column;
+    border: 2px solid grey;
+    border-radius: 12px;
+    margin: 0.5em;
+    padding:1em 1em 5em 1em;
+}
+
+.cardtags a, .cardtagsdetail a{
+    text-decoration: none;
+}
+
+.tag, #tagedit{
+    background: var(--tagcolor);
+    padding:0.25em;
+    color: white;
+    line-height:2;
+    font-weight: 700;
+    margin:0.25em;
+}
+
+#tagedit{
+    width: 120px;
+}
+
+.delete_tag{
+    background: var(--delete);
+}
+
+.tag:hover{
+    background:var(--taghover);
+}
+
+#tagedit{
+    list-style-type:none;
+}
+
+.filterbox{
+    display: none;
+    padding: 1em;
+    justify-content: space-around;
+}
+
+.filter{
+    display:flex;
+    justify-content: space-around;
+}
+
+.categorycheckbox{
+    display: flex;
+}
+
+
+/*--------------------------------------------------
+Form-elements
+---------------------------------------------------*/
+button{
+    cursor: pointer;
+    transition: all 335ms ease 0s;
+    border-radius: 12px;
+    font-size:1rem;
+    padding: 0.5rem;
+    color:white;
+    background: var(--back);
+}
+
+button:hover{
+    background:var(--dark); 
+}
+
+#add_tag{
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    
+}
+
+.search,.btn-start,.filterbox{
+    font-family: 'Roboto', sans-serif;
+}
+
+.upload_recipt{
+    display: flex;
+    background: var(--upload);
+    justify-content: center;
+    margin-right: 1em;
+}
+
+.upload_recipt:hover{
+    background: var(--uploadhover);
+}
+
+.upload{
+    display: flex;
+    justify-content: right;
+}
+
+.search{
+    display:flex;
+}
+
+.search input[name=q]{
+    border: 2px solid grey;
+    border-radius: 4px;
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin-right: 1em;
+}
+
+.btn-start{
+    border: var(--buttoncolor);
+    box-shadow: 5px 5px 7px  rgba(0,0,0,0.2);
+    margin-right: 1em;
+}
+
+.filterbutton1{
+    outline: none;
+    border: none;
+    background:none;
+}
+
+.cardmore,.cardtagedit{
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.cardmore img,.cardtagedit img{
+    max-width: 20px;
+    height:20px;
+}
+.cardmore img{
+    padding: 0px 20px;
+}
+
+.cardmore{
+    padding:1em;
+}
+
+input[type=submit] {
+    background-color: var(--back);
+    color: white;
+    cursor: pointer;
+  }
+
+input [name=username],[name=password],[name="name"],[name="email"],[name="betreff"],[name="text"],[type=submit]{
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  margin: 5px 0;
+  opacity: 0.85;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.titleNewRecipe{
+    border:none;
+    font-size: 1.75em;
+    background:none;
+    color: white;
+    flex-grow: 1;
+}
+
+/*--------------------------------------------------
+Kontformular
+--------------------------------------------------*/
+
+textarea[name=text]{
+    line-height: 50px;
+    max-width: 1072px;
+}
+
+/*--------------------------------------------------
+Impressum
+---------------------------------------------------*/
+#sitecaptionimp{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+#impressumcaption{
+    font-weight: 700;
+}
+
+#placecard{
+    max-width: 1000px;
+    height: 300px;
+    margin-top:20px;
+}
+
+
+/*--------------------------------------------------
+Flex-display
+---------------------------------------------------*/
+
+.header{
+    width:100%;
+    display: flex;
+    height:100px;
+    margin:0px;
+    align-items: center
+}
+
+main{
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#boxpicture{
+    height:100px;
+    width:100px;   
+}
+
+#boxcaption{
+    flex-grow: 3;
+    align-items: center;
+    justify-content:center;
+}
+
+#boxlogin{
+    flex-grow: 2;
+    align-items:center;
+    justify-content: flex-end;
+}
+
+#boxcaption, #boxlogin{
+    display:flex;
+}
+
+#foodpicture,#foodpicturedetail{
+    display: flex;
+    height:200px;
+    max-width:200px;
+    padding-left: 1.5em;
+    padding-top: 1.5em;
+}
+
+#foodpicture_add{
+    display:flex;
+    height: 150px;
+    max-width: 200px;
+}
+
+#foodpicturedetail{
+    padding-right: 30px;
+}
+
+#sizeLoginbox{
+    margin: auto;
+    margin-top: 6px;
+}
+
+.maincontainer{
+    display:flex;
+    flex:100%;
+    justify-content:center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding:auto;
+}
+
+.boxcard{
+    display:flex;
+    flex-direction: column;
+    flex-basis: 200px;
+    width: 350px;
+}
+
+.boxcarddetail{
+    display:flex;
+    flex-direction:column;
+    flex-grow: 1;
+}
+
+.cardbody{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between
+
+}
+
+.detailtext{
+    display: flex;
+    justify-content: left;
+    flex-grow: 3;
+}
+
+.cardtags{
+    flex-direction:row;
+}
+
+.impressumtext {
+    display:flex;
+    margin-left: 2em;
+}
+
+.impressumtext p{
+    justify-content: justify;
+}
+
+.maincontainerLogin,.kontaktformular{
+    display:flex;
+    flex:100%;
+    height:500px;
+    justify-content:center;
+    padding:auto;
+    align-items: center;
+}
+
+#flex-container{
+    display: flex;
+    max-width: 80rem;
+    min-height: 150vh;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+textarea[name = reciptdescription]{
+    display: flex;
+    width: 800px;
+    margin: 10px;
+    padding: 1em;
+    border-radius: 18px;
+}
+
+
+*,::before, ::after{
+    box-sizing:inherit;
+}
+
+/*--------------------------------------------------
+Media-Screen
+---------------------------------------------------*/
+@media only screen and (min-width:20px){
+    .breakpoint{
+        flex-direction: column;
+    }
+}
+@media only screen and (min-width:620px){
+        .breakpoint{
+            flex-direction: row ;
+        }
+}
+/*---
+@media only screen and (min-width:1920px){
+    .lg-3{
+    
+        max-width: 33.33%;
+    }
+}
+
+@media only screen and (min-width:400px){
+    .md-3{
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+*/
+
+.col{
+        padding: 1.5rem;
+    }
+
+
+
+
+
