@@ -69,8 +69,7 @@ class Header extends Component{
         return(
             <header>
                 <div className = "header">
-                <meta name="mobile-web-app-capable" content="yes"/>
-                <meta name="apple-mobile-web-app-capable" content="yes"/>
+                <link rel="manifest" href="/manifest.json" />
                   <a href= "/"><img id= "boxpicture" src={logo} alt= "Bild kann nicht geladen werden"></img></a>
                   <div id = "boxcaption">
                     <h1 id = "Maincaption">Captain Cook - [{this.state.route}]</h1>
