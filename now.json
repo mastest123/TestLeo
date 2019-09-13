@@ -10,6 +10,6 @@
       { "src": "/api/.*", "dest": "/api/server.js" },
       { "src": "^/static/(.*)", "dest": "/static/$1" },
       { "src": ".*", "dest": "/index.html" },
-      {"src": "manifest.json", "dest": ".manifest.json"}
+      { "src": "/manifest.json", "dest": "static/manifest.json"}
     ]
   }
