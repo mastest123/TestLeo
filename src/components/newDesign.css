@@ -19,6 +19,8 @@ variables
     --buttoncolor: #7d7262;*/
 }
 
+@import url('https://fonts.googleapis.com/css?family=Anton');
+
 
 /*--------------------------------------------------
 Pictures
@@ -40,6 +42,7 @@ html{
 
 header{
     background: var(--tagcolor);
+    font-family: 'Anton', sans-serif;
 }
 
 header{
